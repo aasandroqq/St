@@ -1,0 +1,44 @@
+<nav id="sidebar">
+  <ul class="list-unstyled components">
+    <li>
+      <a routerLink="/user/profile">
+        <i class="fa fa-user-circle"></i>
+        <span translate>leftSideBar.profileLabel</span>
+      </a>
+    </li>
+    <li >
+      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+        <i class="fa fa-briefcase"></i>
+        <span translate>leftSideBar.accountsLabel</span>
+      </a>
+      <div class="accounts-list">
+      <ul class="collapse list-unstyled " id="pageSubmenu" *ngFor="let account of accounts">
+        <li>
+          <a class="accounts-a" [routerLink]="['/user/accounts', account.id]">{{account.name}}</a>
+        </li>
+      </ul>
+        </div>
+    </li>
+    <li>
+      <a routerLink="/user/add-account">
+        <i class="fa fa-plus-circle"></i>
+        <span translate>leftSideBar.addAccount</span>
+      </a>
+    </li>
+    
+    <li>
+      <a routerLink="/user/groups">
+        <i class="fa fa-users"></i>
+        <span translate>leftSideBar.groups</span>
+      </a>
+    </li>
+    <li >
+    <li>
+      <a routerLink="/user/charts">
+        <i class="fa fa-area-chart"></i>
+        <span translate>leftSideBar.chartsLabel</span>
+      </a>
+    </li>
+ 
+  </ul>
+</nav>
